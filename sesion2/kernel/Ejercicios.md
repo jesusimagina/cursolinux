@@ -50,22 +50,30 @@ update-grub2
 update-initramfs -u
 
 ### 10 - Borramos kernel
-cd /boot
-rm config-
-rm initrd.img-
-rm System.map-
-rm vmlinuz-
+	
+**ATENCIÓN: No haga esto sin la supervisión de un adulto**
+
+	cd /boot
+	ls *-nombreversion
+	rm config-
+	rm initrd.img-
+	rm System.map-
+	rm vmlinuz-
 
 ### 11 - Borrar Módulos
-cd /lib/modules
-rm -rf 6.6.0
+
+
+	cd /lib/modules
+	rm -rf {version}
 
 ### 12 - Actualización de GRUB
-update-grub
-update-grub2
+
+	update-grub
+	update-grub2
 
 ### 13 - Reiniciar
-reboot
+
+	reboot
 
 
 
@@ -78,7 +86,7 @@ Limpiamos
 
 Compiamos configuracion anterior
 	
-	cp /boot/config- .config
+	cp /boot/config-{version_anterior} .config
 
 Configuramos
 
@@ -90,12 +98,9 @@ Compilamos
 
 ### Da problemas con el certificado
 
-sudo mkdir -p /usr/local/src/debian
-sudo apt install linux-source
-sudo cp -v /usr/src/linux-source-*/debian/canonical-*.pem /usr/local/src/debian/
-sudo apt purge linux-source*
-...which:
+En el directorio que estais compilando
 
-installs the Ubuntu Linux kernel sources
-copies the certificates into a dedicated non-package-managed directory
-removes any kernel sources package again
+	sudo mkdir -p debian
+	sudo apt install linux-source
+	sudo cp -v /usr/src/linux-source-*/debian/canonical-*.pem /path/debian
+	sudo apt purge linux-source*
