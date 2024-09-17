@@ -17,7 +17,7 @@ jesusimagina/sdk-arm:1.0: Imagen Docker a usar (sdk-imx8 con la etiqueta 1.0).
 
 ### 2 - Instalamos dependencias
 
-	apt install bc libgnutls28-dev uuid-dev libssl-dev u-boot-tools device-tree-compiler python3-setuptools swig python3-dev qemu-system-arm git
+	apt install bc libgnutls28-dev uuid-dev libssl-dev libncurses-dev u-boot-tools device-tree-compiler python3-setuptools swig python3-dev qemu-system-arm git libncurses-dev
 
 libgnutls28-dev: Librerías de desarrollo para GnuTLS.
 uuid-dev: Librerías y archivos de desarrollo para UUID.

@@ -5,7 +5,7 @@
 
 ### 2 - Instalamos Dependencias
 
-	apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev bc
+	apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev bc cpio
 
 Hacemos un docker commit para guardar esta version. Desde el host:
 
