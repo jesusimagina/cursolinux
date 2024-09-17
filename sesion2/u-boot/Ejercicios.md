@@ -30,6 +30,8 @@ python3-dev: Archivos de desarrollo para Python 3.
 
 ### 3 - Descargamos el u-boot
 
+Este paso mejor en el host porque así podremos editar el código sin problemas
+
 	git clone --depth 1 https://github.com/u-boot/u-boot.git
 
 ### 4 - Exportamos el path de la toolchain
@@ -50,6 +52,8 @@ Si hay problemas en el docker se puede hacer desde el host añadiendo *sudo*.
 Nos vamos al directorio de la compilación donde encontraremos el *u-boot.bin*:
 
 	qemu-system-arm -machine virt -nographic -bios u-boot.bin
+
+Para salir del qemu: ctrl+a y despues x
 
 ### 8 - Modificamos el tiempo del boot en el menuconfig
 
