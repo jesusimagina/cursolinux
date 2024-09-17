@@ -1,4 +1,4 @@
-# 1 - Arrancamos el docker
+### 1 - Arrancamos el docker
 
 	docker run -it --rm  -v $(pwd):/work -w /work --hostname cursolinux --name cursolinux  --privileged jesusimagina/sdk-arm:1.0 /bin/bash
 
@@ -15,7 +15,7 @@ jesusimagina/sdk-arm:1.0: Imagen Docker a usar (sdk-imx8 con la etiqueta 1.0).
 /bin/bash: Comando a ejecutar dentro del contenedor (una shell Bash).
 
 
-# 2 - Instalamos dependencias
+### 2 - Instalamos dependencias
 
 	apt install bc libgnutls28-dev uuid-dev libssl-dev u-boot-tools device-tree-compiler python3-setuptools swig python3-dev qemu-system-arm
 
@@ -28,43 +28,43 @@ python3-setuptools: Herramientas para empaquetar y distribuir software en Python
 swig: Generador de interfaces para conectar C/C++ con otros lenguajes.
 python3-dev: Archivos de desarrollo para Python 3.
 
-# 3 - Descargamos el u-boot
+### 3 - Descargamos el u-boot
 
 	git clone --depth 1 https://github.com/u-boot/u-boot.git
 
-# 4 - Exportamos el path de la toolchain
+### 4 - Exportamos el path de la toolchain
 
 	export TOOLCHAIN=/opt/path2toolchain/arm-linux-gnueabihf-
 
-# 5 - Generamos la configuración
+### 5 - Generamos la configuración
 
 	make ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C u-boot qemu_arm_defconfig O=/work/compile/u-boot-qemu
 
-# 6 - Compilamos
+### 6 - Compilamos
 
 	make -j $(nproc) ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C compile/u-boot-qemu
 
-# 7 - Probamos con qemu
+### 7 - Probamos con qemu
 
 Si hay problemas en el docker se puede hacer desde el host añadiendo *sudo*.
 Nos vamos al directorio de la compilación donde encontraremos el *u-boot.bin*:
 
 	qemu-system-arm -machine virt -nographic -bios u-boot.bin
 
-# 8 - Modificamos el tiempo del boot en el menuconfig
+### 8 - Modificamos el tiempo del boot en el menuconfig
 
 	make ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C compile/u-boot-qemu menuconfig
 
-# 9 - Probamos a modificar las variables de entorno en la consola del u-boot
+### 9 - Probamos a modificar las variables de entorno en la consola del u-boot
 
 	setenv bootdelay 3
 	saveenv
 	reset
 
-# 10 - Escribir un comando para el u-boot
+### 10 - Escribir un comando para el u-boot
 
-# 11 - Añadir un argumento (o varios) al comando
+### 11 - Añadir un argumento (o varios) al comando
 
-# 12 - Escribir un script para ejecutar varios comandos aceptando diversos argumentos
+### 12 - Escribir un script para ejecutar varios comandos aceptando diversos argumentos
 
-# 13 - Añadir al menuconfig la opción de que esté o no el comando que hemos creado
+### 13 - Añadir al menuconfig la opción de que esté o no el comando que hemos creado
