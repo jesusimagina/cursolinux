@@ -22,6 +22,7 @@ Navega a "Networking Utilities" y desactiva "tc"
 
 	export ARCH=arm
 	export CROSS_COMPILE=/opt/sdk-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
+	mkdir -p /work/rootfs/compile/busybox
 	make -C busybox-1.36.1 menuconfig O=/work/rootfs/compile/busybox
 	make -j$(nproc) -C /work/rootfs/compile/busybox
 	make install -C /work/rootfs/compile/busybox
