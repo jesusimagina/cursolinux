@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# apt install net-tools uml-utilities
+# apt install net-tools uml-utilities nfs-kernel-server
+# Hay que editar el /etc/exports como sudo
+# Añadir la línea: /home/user/cursolinux/rootfs/compile/rootfs *(rw,sync,no_subtree_check,no_root_squash)
+# Reiniciar el servicio:
+# 	systemctl restart nfs-kernel-server
+
+
 
 ROOTDIR=/home/user/cursolinux/rootfs/compile/rootfs
 HOST_IP=192.168.1.1
