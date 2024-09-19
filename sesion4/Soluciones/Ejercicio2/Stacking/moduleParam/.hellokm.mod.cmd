@@ -1,0 +1,1 @@
+savedcmd_/home/user/work/drivers/moduleParam/hellokm.mod := printf '%s\n'   hellokm.o | awk '!x[$$0]++ { print("/home/user/work/drivers/moduleParam/"$$0) }' > /home/user/work/drivers/moduleParam/hellokm.mod

@@ -1,0 +1,1 @@
+savedcmd_/home/user/cursolinux/sesion4/drivers/Stacking/hellokm/modules.order := {   echo /home/user/cursolinux/sesion4/drivers/Stacking/hellokm/hellokm.o;   echo /home/user/cursolinux/sesion4/drivers/Stacking/hellokm/../loggerkm/loggerkm.o; :; } > /home/user/cursolinux/sesion4/drivers/Stacking/hellokm/modules.order

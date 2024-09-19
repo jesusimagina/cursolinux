@@ -1,0 +1,1 @@
+savedcmd_/home/user/cursolinux/sesion4/drivers/Stacking/hellokm/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/user/cursolinux/sesion4/drivers/Stacking/hellokm/Module.symvers -T /home/user/cursolinux/sesion4/drivers/Stacking/hellokm/modules.order -i Module.symvers -e 

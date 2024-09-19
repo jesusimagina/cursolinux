@@ -1,0 +1,1 @@
+savedcmd_/home/user/cursolinux/sesion4/drivers/Stacking/hellokm/hellokm.mod := printf '%s\n'   hellokm.o | awk '!x[$$0]++ { print("/home/user/cursolinux/sesion4/drivers/Stacking/hellokm/"$$0) }' > /home/user/cursolinux/sesion4/drivers/Stacking/hellokm/hellokm.mod
