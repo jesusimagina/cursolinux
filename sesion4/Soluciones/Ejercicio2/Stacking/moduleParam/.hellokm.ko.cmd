@@ -1,1 +1,0 @@
-savedcmd_/home/user/work/drivers/moduleParam/hellokm.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/user/work/drivers/moduleParam/hellokm.ko /home/user/work/drivers/moduleParam/hellokm.o /home/user/work/drivers/moduleParam/hellokm.mod.o
