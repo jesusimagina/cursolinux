@@ -17,4 +17,4 @@ En el módulo de inicio hacer algo con ese parámetro.
 
 ### Probarlo
 
-	sudo insmod hellokm.ko mp_debugLevel=2
+	sudo insmod hellokm.ko mp_debug_Level=2

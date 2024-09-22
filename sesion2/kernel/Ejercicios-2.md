@@ -16,9 +16,9 @@ Dentro de la carpeta de los fuentes:
 
 	make ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C $LINUXSRC  mrproper
 	make ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C $LINUXSRC versatile_defconfig O=/work/compile/linux-qemu
-	make ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C /work/compile/linux-qemu zImage
-	make ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C /work/compile/linux-qemu modules
-	make ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C /work/compile/linux-qemu dtbs
+	make -j$(nproc) ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C /work/compile/linux-qemu zImage
+	make -j$(nproc) ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C /work/compile/linux-qemu modules
+	make -j$(nproc) ARCH=arm CROSS_COMPILE=$TOOLCHAIN -C /work/compile/linux-qemu dtbs
 
 ### Probamos con qemu
 
