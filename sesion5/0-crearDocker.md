@@ -4,7 +4,7 @@
 
 Con el Dockerfile que se encuentra en este repositorio
 
-	docker build --build-arg GROUP_ID=$(id -g) --build-arg USER_ID=$(id -g) -t ubuntu-poky:latest .
+	docker build --build-arg GROUP_ID=$(id -g) --build-arg USER_ID=$(id -u) -t ubuntu-poky:latest .
 
 ### Docker commit 
 
@@ -21,7 +21,7 @@ Dentro del docker
         
 Comprobar el user id y el group id de el usuario fuera del docker y ejecutar estos comandos dentro del docker
 	
-	useradd -rm -d /home/user -s /bin/bash-u $USER_ID user
+	useradd -rm -d /home/user -s /bin/bash -u $USER_ID user
         echo user:user | chpasswd
         usermod -aG sudo user
         groupmod --gid $GROUP_ID user
