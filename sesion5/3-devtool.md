@@ -81,5 +81,5 @@ Si quisieramos quitarlo
 
 ### Para añadir la receta a nuestra capa
 
-	devtool finish -f logger ../layers/meta-hello
+	devtool finish -f logger /work/layers/meta-hello
 	rm -rf workspace/sources/logger	
