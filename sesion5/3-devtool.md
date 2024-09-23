@@ -77,7 +77,7 @@ Podemos comprobar en el destino que se encuentra en /usr/lib
 
 Si quisieramos quitarlo
 
-	devtool undeploy-target logger
+	devtool undeploy-target logger  root@192.168.7.2
 
 ### Para añadir la receta a nuestra capa
 
