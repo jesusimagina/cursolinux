@@ -17,7 +17,7 @@ Modificamos el helloworld.c para que quede así
 
 ### Añadimos el append a la receta
 
-Generamos un helloworld_1.0.append
+Generamos un helloworld_1.0.bbappend
 
 	DEPENDS += "logger"
 
