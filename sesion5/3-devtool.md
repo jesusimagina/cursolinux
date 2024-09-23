@@ -61,6 +61,14 @@ Arrancamos al imagen con qemuarm
 
 	runqemu qemuarm nographic
 
+Arrancar desde otra terminal del host otra sesión de docker
+
+	docker exec -it cursolinux /bin/bash
+
+Dentro de la sesión ejecutar el source
+
+	source poky/oe-init-build-env build-qemuarm
+
 Esto nos permitirá instalar nuestro paquete en el destino
 	
 	devtool deploy-target logger root@192.168.7.2
