@@ -36,8 +36,7 @@ y añadimos las siguientes líneas:
 
 	BB_NUMBER_THREADS?="5"
 	PARALLEL_MAKE?="-j5"
-	INHERIT+="rm_work"
-
+ 
 El número 5 es dependiente de vuestro sistema. Cuantos más se puedan asignar mejor. 
 
 Esto significa:
