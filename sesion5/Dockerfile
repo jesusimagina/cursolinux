@@ -9,7 +9,7 @@ RUN apt update && apt upgrade -y && \
         build-essential chrpath socat libsdl1.2-dev xterm locales iproute2 sudo vim \
         uml-utilities cpio file net-tools screen iptables iputils-ping && \
         locale-gen en_US.UTF-8 && \
-        echo root:root | chpasswd
+        echo root:root | chpasswd && \
 	useradd -rm -d /home/user -s /bin/bash-u ${USER_ID} user  2>/dev/null && \
 	echo user:user | chpasswd && \
 	usermod -aG sudo user && \
