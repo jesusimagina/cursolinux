@@ -55,7 +55,7 @@ Nuestra distribución no tiene el paquete ssh instalado por lo que se lo incluim
 	
 Generamos la imagen de nuevo
 
-	devtool build-image core-image minimal
+	devtool build-image core-image-minimal
 	
 Arrancamos al imagen con qemuarm
 
