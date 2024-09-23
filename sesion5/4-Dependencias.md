@@ -29,8 +29,7 @@ Generamos un helloworld_1.0.bbappend
 
 ### Añadimos a la imagen las dos recetas
 
-	IMAGE_INSTALL_append = " helloworld"
-	IMAGE_INSTALL_append = " logger"
+	IMAGE_INSTALL_append += " helloworld"
 	
 ### Generamos la imagen
 
