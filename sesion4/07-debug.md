@@ -4,7 +4,7 @@
 	docker run -it --rm -v $(pwd):/work -w /work -v /lib/modules:/lib/modules --hostname cursolinux --name cursolinux  --privileged jesusimagina/sdk-arm:latest /bin/bash
 
 
-	apt gdb-multiarch
+	apt install gdb-multiarch
 	
 	
 En otro terminal
