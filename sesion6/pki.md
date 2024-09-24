@@ -1,7 +1,5 @@
 # Generar una PKI con Openssl
 
-sudo apt-get install libtasn1-bin
-
 ## Generamos una CA
 
 ### 1 - Generamos un openssl.cnf
