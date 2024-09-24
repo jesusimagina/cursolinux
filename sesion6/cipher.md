@@ -122,6 +122,10 @@ Compilamos usando el propio gcc enlazando las librerias de openssl
 
 	gcc -o encrypt encrypt.c -lssl -lcrypto
 
+ Si no encuentra las cabeceras es posible que haya que instalar el paquete de desarrollo
+
+	sudo apt install libssl-dev
+
 Se puede probar el fichero de antes
 
 	./encrypt text.plain text.enc
@@ -213,10 +217,6 @@ Hacemos algo similar pero para descifrar
 Compilamos usando el propio gcc enlazando las librerias de openssl
 
 	gcc -o decrypt decrypt.c -lssl -lcrypto
-
-Si no encuentra las cabeceras es posible que haya que instalar el paquete de desarrollo
-
-	sudo apt install libssl-dev
 
 Se puede probar el fichero de antes
 
