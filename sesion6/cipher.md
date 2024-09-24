@@ -221,7 +221,3 @@ Si no encuentra las cabeceras es posible que haya que instalar el paquete de des
 Se puede probar el fichero de antes
 
 	./decrypt text.enc text.plain
-
-### DH
-
-./dh user2-cert.der user2-key.der
