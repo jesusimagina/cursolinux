@@ -118,7 +118,7 @@ Con el ca-cert.der y el user-cert.der en el mismo directorio probamos si verific
 Modificamos el certificado de usuario para comprobar que verifica bien
 
 	sudo apt install hexedit
-	hexedit user-cert.der
+	hexedit <data_file>
 	
 Modificamos algun bit y salimos con Ctrl+x
 
