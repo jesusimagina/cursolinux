@@ -94,7 +94,7 @@ Esto es lo que se conoce como formato PEM pero ambas pueden pasarse a formato AS
 	
 ## Generamos un certificado de usuario
 
-	mkdir -p users/{certs,private, csr}
+	mkdir -p users/{certs,private,csr}
 
 ### 4 - Generar la clave privada para el usuario
 	
