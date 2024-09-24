@@ -113,7 +113,7 @@ Compilamos
 
 Con el ca-cert.der y el user-cert.der en el mismo directorio probamos si verifica la firma:
 
-	./verifySignature ca-cert.der
+	./verifySignature <cert_file> <data_file> <sig_file>
 	
 Modificamos el certificado de usuario para comprobar que verifica bien
 
