@@ -4,6 +4,65 @@
 
 ### 1 - Generamos un openssl.cnf
 
+	[ ca ]
+	default_ca = CA_default
+	
+	[ CA_default ]
+	dir               = ./ca
+	certs             = $dir/certs
+	crl_dir           = $dir/crl
+	new_certs_dir     = $dir/newcerts
+	database          = $dir/index.txt
+	serial            = $dir/serial
+	RANDFILE          = $dir/private/.rand
+	
+	private_key       = $dir/private/ca-key.pem
+	certificate       = $dir/certs/ca-cert.pem
+	
+	default_md        = sha512
+	name_opt          = ca_default
+	cert_opt          = ca_default
+	default_days      = 3650
+	preserve          = no
+	policy            = policy_strict
+	
+	[ policy_strict ]
+	countryName             = match
+	stateOrProvinceName     = match
+	organizationName        = match
+	organizationalUnitName  = optional
+	commonName              = supplied
+	emailAddress            = optional
+	
+	[ req ]
+	default_bits        = 4096
+	distinguished_name  = req_distinguished_name
+	string_mask         = utf8only
+	
+	default_md          = sha512
+	
+	[ req_distinguished_name ]
+	countryName                     = Country Name (2 letter code)
+	stateOrProvinceName             = State or Province Name (full name)
+	localityName                    = Locality Name (eg, city)
+	0.organizationName              = Organization Name (eg, company)
+	organizationalUnitName          = Organizational Unit Name (eg, section)
+	commonName                      = Common Name (eg, fully qualified host name)
+	emailAddress                    = Email Address
+	
+	countryName_default             = US
+	stateOrProvinceName_default     = California
+	localityName_default            = San Francisco
+	0.organizationName_default      = My Company
+	organizationalUnitName_default  = IT
+	commonName_default              = mycompany.com
+	emailAddress_default            = admin@mycompany.com
+	
+	[ v3_ca ]
+	subjectKeyIdentifier = hash
+	authorityKeyIdentifier = keyid:always,issuer
+	basicConstraints = CA:TRUE
+
 ### 2 - Crear la estructura de directorios para la CA:
 	
 	mkdir -p ca/{certs,crl,newcerts,private}
