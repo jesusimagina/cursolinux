@@ -103,4 +103,4 @@ Compilamos usando el propio gcc enlazando las librerias de openssl
 	
 Probamos 
 
-	./dh user1-cert.der user2-cert.der
+	./dh user1-cert.der user2-key.der outputfile
