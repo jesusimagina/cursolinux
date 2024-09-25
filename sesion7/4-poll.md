@@ -1,4 +1,17 @@
 # Operacion de poll
+### Dos sesiones
+
+Para este ejercicio es bueno tener dos sesiones dentro del docker
+
+	docker exec -it cursolinux /bin/bash
+ 
+ Cuando se lanze el qemu desde la principal, desde la otra sesión se puede hacer un ssh 
+
+ 	ssh root@<ip-qemuarm>
+  
+Si da error, por un tema de claves dirá que hay que borrar la clave guardada y el comando.
+
+### Implementación
 
 Includes 
 
