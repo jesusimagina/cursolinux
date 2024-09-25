@@ -1,0 +1,45 @@
+
+# DEBUG en el kernel
+
+Compilar el Kernel con 
+
+	CONFIG_DEBUG_INFO=y
+	CONFIG_DEBUG_KERNEL=y
+	
+Para ello:
+
+	bitbake -c virtual/kernel
+	
+Generar la imagen
+
+	bitbake core-image-minimal
+	
+Lanzar el qemu con parámetros de configuración del gdb
+	
+	runqemu qemuarm nographic qemuparams="-S -s"
+	
+### Conectar el gdb
+
+En otro terminal
+
+	docker exec -it cursolinux /bin/bash
+
+Instalarse el gdb
+
+	sudo apt install gdb-multiarch
+
+Ir a la ruta de compilación del kernel
+
+	cd /work/build-qemuarm/tmp/work/qemuarm-poky-linux-gnueabi/linux-yocto/5.4.273+gitAUTOINC+ecd382f347_b7e0891bf4-r0/linux-qemuarm-standard-build
+
+	gdb-multiarch vmlinux
+
+Conectar GDB al servidor de QEMU:
+
+	target remote localhost:1234
+	
+Establecer un punto de interrupción y continuar la ejecución:
+
+	break hellokm_write
+   	continue
+
