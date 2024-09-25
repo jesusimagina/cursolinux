@@ -25,6 +25,8 @@ Una funcón poll podria ser
 	    return mask;
 	}
 
+HAy que gestionar el is_message_available y el wake_up_interruptible(&wq) con las funciones entrada salida 
+
 Hay que asignar a la estructura de operaciones nuestra imlementación de poll
 Generar una receta para este fichero consumidor.c que hace un poll sobre el dispositivo y cuando hay datos lee lo que haya
 
