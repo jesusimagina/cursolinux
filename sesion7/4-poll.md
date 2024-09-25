@@ -6,7 +6,7 @@ Includes
 	#include <linux/sched.h>
 	#include <linux/poll.h>
 
-Demomento solo haremos que avise si hay algo escrito. Definiremos estas variables
+De momento solo haremos que avise si hay algo escrito. Definiremos estas variables
 	
 	static int is_message_available = 0;
 	static DECLARE_WAIT_QUEUE_HEAD(wq);
@@ -24,7 +24,8 @@ Una funcón poll podria ser
 
 	    return mask;
 	}
-	
+
+Hay que asignar a la estructura de operaciones nuestra imlementación de poll
 Generar una receta para este fichero consumidor.c que hace un poll sobre el dispositivo y cuando hay datos lee lo que haya
 
 	#include <stdio.h>
