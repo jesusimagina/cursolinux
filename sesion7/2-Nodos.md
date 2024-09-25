@@ -102,7 +102,7 @@ Añadimos
 
 En la rutina del init despues del registro:
 
-	hellokm_class = class_create(DEVICE_NAME);
+	hellokm_class = class_create(THIS_MODULE, DEVICE_NAME);
 	
 	for (i = 0; i < NUM_DEVICES; i++) {
 		device_create(hellokm_class, NULL,
