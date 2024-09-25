@@ -59,4 +59,40 @@ La función write
 Creamos la receta
 La aplicación debe abrir el dispositivo y escribir lo que se le pase como parámetro de entrada
 
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <string.h>
+	#include <fcntl.h>
+	#include <unistd.h>
+	
+	#define MAX_LEN 32
+	
+	int main(int argc, char *argv[]) {
+	    if (argc != 2) {
+	        fprintf(stderr, "Uso: %s <mensaje>\n", argv[0]);
+	        return 1;
+	    }
+	
+	    if (strlen(argv[1]) > MAX_LEN) {
+	        fprintf(stderr, "El mensaje no debe sobrepasar los %d bytes.\n", MAX_LEN);
+	        return 1;
+	    }
+	
+	    int fd = open("/dev/hellokm", O_WRONLY);
+	    if (fd == -1) {
+	        perror("Error al abrir /dev/hellokm");
+	        return 1;
+	    }
+	
+	    if (write(fd, argv[1], strlen(argv[1])) == -1) {
+	        perror("Error al escribir en /dev/hellokm");
+	        close(fd);
+	        return 1;
+	    }
+	
+	    close(fd);
+	    return 0;
+	}
+
+
 
