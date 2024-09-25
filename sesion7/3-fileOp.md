@@ -50,7 +50,7 @@ La función write
 	    message[length] = '\0'; // Null-terminate the string
 	    message_size = length;
 
-	    printk(KERN_INFO "hellokm: Recibido %zu bytes. is_message_available=%d \n", length, is_message_available);
+	    printk(KERN_INFO "hellokm: Recibido %zu bytes. is_message_available=%d \n", length);
 	    return length;
 	}
 	
