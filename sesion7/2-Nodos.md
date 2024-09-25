@@ -111,7 +111,8 @@ En la rutina del init despues del registro:
 
 En el exit antes del desregistro
 
-	for (int i = 0; i < NUM_DEVICES; i++) {
+ 	int i = 0;
+	for (i = 0; i < NUM_DEVICES; i++) {
 		device_destroy(hellokm_class, MKDEV(MAJOR_NUM, i));
 	}
 	
