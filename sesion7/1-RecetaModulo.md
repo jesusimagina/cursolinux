@@ -60,7 +60,7 @@ Editamos el /work/layers/meta-hello/recipes-kernel/hellokm/files/Makefile
 
 ### 3 - Creamos el fichero de la receta
 
-Editamos el /work/layers/meta-hello/recipes-kernel/hellokm/hellokm.bb
+Editamos el /work/layers/meta-drivers/recipes-kernel/hellokm/hellokm.bb
 
 	SUMMARY = "My Module"
 	LICENSE = "GPLv2"
