@@ -1,1 +1,0 @@
-savedcmd_/home/user/cursolinux/sesion4/drivers/Stacking/loggerkm/modules.order := {   echo /home/user/cursolinux/sesion4/drivers/Stacking/loggerkm/loggerkm.o; :; } > /home/user/cursolinux/sesion4/drivers/Stacking/loggerkm/modules.order
